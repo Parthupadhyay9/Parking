@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="mumbai.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"></script>
+
+    <!--<title>Admin Dashboard Panel</title>-->
+  </head>
+  <body>
+    <nav>
+        <a href="/welcome.html">
+      <div class="logo-name">
+        <div class="logo-image">
+            <img
+            src="data:image/png;base64,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"
+            alt=""
+          />
+        </div>
+        <span class="logo_name"
+        >Park<span style="color: #d2042d">IT</span></span
+      >
+    </a>
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="/welcome.html">
+              <i class="uil uil-estate"></i>
+              <span class="link-name">Dahsboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="uil uil-location-point"></i>
+              <span class="link-name">Locations</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/source.html">
+              <i class="uil uil-arrow"></i>
+              <span class="link-name">Source Codes</span>
+            </a>
+          </li>
+          <li>
+            <a href="/account.html">
+              <i class="uil uil-comments"></i>
+              <span class="link-name">Form</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a onclick="logout()" href="#">
+              <i class="uil uil-signout"></i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+
+        <img src="/images/depositphotos_209469984-stock-illustration-flat-isolated-vector-illustration-icon.jpg" alt="">
+        <div class="mode">
+          <div class="mode-toggle">
+            <span class="switch"></span>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="dash-content">
+        <div class="overview">
+ 
+
+      
+
+        <div class="activity">
+          <div class="title">
+            <i class="uil uil-clock-three"></i>
+            <span class="text">Mumbai</span>
+            <hr>
+
+          </div>
+
+          <div class="activity-data">
+            <div class="data names">
+              <span class="data-title">Areas</span>
+              <span class="data-list">Railway Station</span>
+              <span class="data-list">Mall</span>
+            </div>
+            <div class="data email">
+              <span class="data-title">Slots</span>
+              <span class="data-list">Stat</span>
+              <span class="data-list">Stat</span>
+              
+            </div>
+            <div class="data filled">
+              <span class="data-title">Occupied</span>
+              <span class="data-list occupied">Stat</span>
+              <span class="data-list occupied">Stat</span>
+            
+            </div>
+            <div class="data res">
+              <span class="data-title">Reserved</span>
+              <span class="data-list reserved">Stat</span>
+              <span class="data-list reserved">Stat</span>
+            </div>
+            <div class="data empty">
+              <span class="data-title">Vacant</span>
+              <span class="data-list vacant">Stat</span>
+              <span class="data-list vacant">Stat</span>
+            </div>
+            <div class="data overall">
+                <span class="data-title">Total</span>
+                <span class="data-list total">Stat</span>
+                <span class="data-list total">Stat</span>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <script src="places.js"></script>
+    <script>
+      function logout(){
+    firebase.auth().signOut();
+};
+
+    </script>
+
+  </body>
+</html>
