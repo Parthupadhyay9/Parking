@@ -2,39 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Contact Us</title>
+    <title>Email Template</title>
   </head>
   <body>
-    <div class="container">
-      <form onsubmit="sendEmail();reset();return false;">
-        <h3>Contact Us</h3>
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Email id" required />
-        <input type="text" id="phone" placeholder="Phone Number" required />
-        <textarea
-          id="message"
-          rows="4"
-          placeholder="How can we help you?"
-        ></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail() {
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "parth.capt@gmail.com",
-          Password: "pass@123",
-          To: "parth.capt@gmail.com",
-          From: document.getElementById("email").value,
-          Subject: "Someone Wants To Contact You!!!",
-          Body: "And this is the body",
-        }).then((message) => alert(message));
-      }
-    </script>
+    <h1>Contact us</h1>
+    <form class="contact-form">
+      <label for="">Name</label><br />
+      <input class="name" type="text" placeholder="name" /><br />
+      <label for="">Email</label><br />
+      <input class="email" type="email" placeholder="email" /><br />
+      <label for="">Message</label><br />
+      <textarea
+        class="message"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="message"
+      ></textarea
+      ><br />
+      <button type="submit">Submit</button>
+    </form>
+    <div class="infoResults"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
