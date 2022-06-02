@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="mumbai.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"></script>
+
+    <title>ParkIt-Display Unit</title>
+    <link rel="icon" type="image/png" href="logo1.png" />
+  </head>
+  <body>
+    <nav>
+        <a href="/welcome.html">
+      <div class="logo-name">
+        <div class="logo-image">
+            <img
+            src="logo1.png"/>
+        </div>
+        <span class="logo_name"
+        >Park<span style="color: #d2042d">IT</span></span
+      >
+    </a>
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="/welcome.html">
+              <i class="uil uil-estate"></i>
+              <span class="link-name">My Parking Center</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/source.html">
+              <i class="uil uil-arrow"></i>
+              <span class="link-name">Source Codes</span>
+            </a>
+          </li>
+          <li>
+            <a href="/account.html">
+              <i class="uil uil-comments"></i>
+              <span class="link-name">Account</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="uil uil-comments"></i>
+                <span class="link-name">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a onclick="logout()" href="#">
+              <i class="uil uil-signout"></i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+
+        <img src="/images/depositphotos_209469984-stock-illustration-flat-isolated-vector-illustration-icon.jpg" alt="">
+        <div class="mode">
+          <div class="mode-toggle">
+            <span class="switch"></span>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="dash-content">
+        <div class="overview">
+ 
+
+      
+
+        <div class="activity">
+          <div class="title">
+            <i class="uil uil-clock-three"></i>
+            <span class="text">My Parking</span>
+            <hr>
+
+          </div>
+
+          <div class="activity-data">
+            <div class="data names">
+              <span class="data-title"></span>
+              <span class="data-list">Center</span>
+            </div>
+            <div class="data overall">
+              <span class="data-title">Total Slots</span>
+              <span class="data-list">4</span>
+                            
+            </div>
+            <div class="data filled">
+              <span class="data-title">Occupied</span>
+              <span class="data-list occupied">Stat</span>
+              
+            </div>
+            
+            <div class="data empty">
+              <span class="data-title">Vacant</span>
+              <span class="data-list vacant">Stat</span>
+             </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <script src="places.js"></script>
+    <script>
+      function logout(){
+    firebase.auth().signOut();
+};
+
+    </script>
+
+  </body>
+</html>

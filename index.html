@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Footer Design</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Help on ParkIt</title>
     <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
   </head>
   <body>
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h4>Source Code</h4>
-            <ul>
-              <li><a href="#">about us</a></li>
-              <li><i class="fab fa-github"></i></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>follow us</h4>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
+    <center>
+      <div class margin="100px">
+        <h1>Contact us</h1>
+        <form class="contact-form">
+          <label for="">Name</label><br />
+          <input class="name" type="text" placeholder="Name" /><br />
+          <label for="">Email</label><br />
+          <input class="email" type="email" placeholder="Email" /><br />
+          <label for="">Message</label><br />
+          <textarea
+            class="message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your query..."
+          ></textarea
+          ><br />
+          <button type="submit">Submit</button>
+        </form>
       </div>
-    </footer>
+    </center>
+    <div class="infoResults"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
