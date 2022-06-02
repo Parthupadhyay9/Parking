@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ParkIt-Source Codes</title>
+    <link rel="icon" type="image/png" href="logo1.png" />
+    <link rel="stylesheet" href="./welcome.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+
+  <body>
+    <!-- <center><div style="margin:100px">
+        <span id="user" class="message">Hello, < email-id ></Email-id></span>
+        <div class="success"><span>Welcome, You are successfully loged in!!!</span></div><br/>
+        <button  bclass="btntn-danger" onclick="logout()">Logout</button>
+    </div></center> -->
+
+    <nav>
+      <a href="welcome.html">
+        <div class="logo-name">
+          <div class="logo-image">
+            <img src="logo.png" />
+          </div>
+
+          <span class="logo_name"
+            >Park<span style="color: #d2042d">IT</span></span
+          >
+        </div>
+      </a>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a href="/welcome.html">
+              <i class="uil uil-comments"></i>
+              <span class="link-name">Parking Center</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="account.html">
+              <i class="uil uil-comments"></i>
+              <span class="link-name">Account</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a onclick="logout()" href="#">
+              <i class="uil uil-signout"></i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard">
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="search" placeholder="Search here..." />
+        </div>
+
+        <img
+          src="/images/depositphotos_209469984-stock-illustration-flat-isolated-vector-illustration-icon.jpg"
+          alt=""
+        />
+        <div class="mode">
+          <div class="mode-toggle">
+            <span class="switch"></span>
+          </div>
+        </div>
+        <!-- <div class="link-name"><span>Welcome, You are successfully loged in!!!</span></div><br/> -->
+        <!-- <span id="user" class="text">Hello, < email-id ></Email-id></span> -->
+      </div>
+
+      <div class="dash-content">
+        <div class="overview">
+          <div class="title">
+            <i class="uil uil-arrow"></i>
+            <span class="text">Source Codes</span>
+          </div>
+
+          <div class="boxes">
+            <div class="box box1">
+              Get Source Code on Github -->
+              <br />
+            </div>
+            <div class="box box2">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const card = document.querySelector(".boxes");
+      const cardtoggle = document.querySelector(".toggle");
+      cardtoggle.onclick ==
+        function () {
+          card.cardList.toggle("active");
+        };
+    </script>
+    <script src="script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="./firebase.js"></script>
+    <script src="./welcome.js"></script>
+  </body>
+</html>

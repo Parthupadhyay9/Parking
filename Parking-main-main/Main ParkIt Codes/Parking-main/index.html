@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Help on ParkIt</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <center>
+      <div class margin="100px">
+        <h1>Contact us</h1>
+        <form class="contact-form">
+          <label for="">Name</label><br />
+          <input class="name" type="text" placeholder="Name" /><br />
+          <label for="">Email</label><br />
+          <input class="email" type="email" placeholder="Email" /><br />
+          <label for="">Message</label><br />
+          <textarea
+            class="message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your query..."
+          ></textarea
+          ><br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </center>
+    <div class="infoResults"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
